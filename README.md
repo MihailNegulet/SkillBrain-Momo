@@ -53,5 +53,7 @@ PULL
 git checkout main
 
 git pull origin main
-test
+
+test test test
+
 test
