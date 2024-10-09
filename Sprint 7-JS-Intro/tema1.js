@@ -1,8 +1,13 @@
 // Definim functia
-function isDivided(x){
+function isDividedByTen(x) {
     return x % 10 === 0;
 }
 
+// Creem o functie pentru a nu se mai repeta textul
+function printOutput(n) {
+    console.log(`Numarul ${n} este divizibil cu 10? ` + isDividedByTen(n));
+}
+
 // Afisam rezultatele
-console.log(`Numarul 100 este divizibil cu 10? ` + isDivided(100));
-console.log(`Numarul 23 este divizibil cu 10? ` + isDivided(23));
+printOutput(23);
+printOutput(100);
