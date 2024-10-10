@@ -1,0 +1,1 @@
+// Tipăriți toate numerele pare de la 0 la 10
