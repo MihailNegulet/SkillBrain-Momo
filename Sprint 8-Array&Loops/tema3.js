@@ -1,8 +1,11 @@
 // Creați o funcție care inversează un șir de numere
 
-const array1 = [1, -5, 20, -34, 16, 29, 36, -4];
-
-function reverseArray(array1) {
-    return array1.reverse();
+function reverseArray(array) {
+    return array.reverse();
 }
-console.log(reverseArray(array1));
+
+const array1 = [1, -5, 20, -34, 16, 29, 36, -4];
+const array2 = [...array1];
+
+console.log(reverseArray(array2));
+console.log(array1);
