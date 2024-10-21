@@ -20,7 +20,7 @@ const books = [
 
 function getBooks(books) {
     for (let book of books) {
-        if(book.esteCitita) {
+        if (book.esteCitita) {
             console.log(`Ai citit deja "${book.titlu}" de "${book.autor}".`);
         }
         else {

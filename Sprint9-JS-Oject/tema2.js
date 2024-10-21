@@ -1,9 +1,9 @@
 // Scrieți o funcție care returnează un obiect nou fără proprietățile furnizate
 
-function getPartOfObject(obj, p){
+function getPartOfObject(obj, propertyToRemove){
     const obj2 = {...obj};
     
-    for(let propietati of p) {
+    for(let propietati of propertyToRemove) {
         delete obj2[propietati];
     }
 
