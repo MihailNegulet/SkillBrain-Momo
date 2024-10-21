@@ -22,8 +22,7 @@ function printBooksStatus (books) {
     for (let book of books) {
         if (book.esteCitita) {
             console.log(`Ai citit deja "${book.titlu}" de "${book.autor}".`);
-        }
-        else {
+        } else {
             console.log(`Trebuie sa citesti "${book.titlu}" de "${book.autor}".`);
         }
     }
