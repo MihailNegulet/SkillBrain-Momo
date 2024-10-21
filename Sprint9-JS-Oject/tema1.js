@@ -1,23 +1,22 @@
 // Scrieți o funcție care creează un obiect pentru a păstra informații despre rețeta ta preferată
 
-function getReceipe(title, mumberOfPortions, incredients){
+function getRecipe(title, mumberOfPortions, incredients) {
     const reteta = {
-        titlu : title,
-        portii : mumberOfPortions,
-        incrediente : incredients,
+        titlu: title,
+        portii: mumberOfPortions,
+        incrediente: [...incredients],
     };
 
     return reteta;
 }
 
-const showReceipe = (reteta) => {
+const showRecipe = (reteta) => {
     console.log(`Reteta noastra preferata de astazi este: ${reteta.titlu}, pentru ${reteta.portii} portii, cu urmatoarele incrediente: ${reteta.incrediente}.`);
-
 }
 
-const reteta1 = getReceipe("Pizza", 3, ['sunca', 'cas', 'ketchup']);
-const reteta2 = getReceipe("salata", 5, ['rosii', 'castraveti', 'cascaval', 'salata', 'morcovi']);
+const reteta1 = getRecipe("Pizza", 3, ['sunca', 'cas', 'ketchup']);
+const reteta2 = getRecipe("salata", 5, ['rosii', 'castraveti', 'cascaval', 'salata', 'morcovi']);
 
-showReceipe(reteta1);
-showReceipe(reteta2);
+showRecipe(reteta1);
+showRecipe(reteta2);
 
