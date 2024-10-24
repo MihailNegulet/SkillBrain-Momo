@@ -1,7 +1,27 @@
+* {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: normal;
+}
+
 .nav {
-    height: 80px;
     justify-content: center;
     align-items: center;
+}
+
+body > div {
+    margin: 75px auto;
+}
+
+body > div:nth-child(2) {
+    margin-bottom: 75px;
+    margin-top: 25px;
+}
+
+body > div:last-child {
+    margin-top: 75px;
+    margin-bottom: 0;
 }
 
 .row {
@@ -16,7 +36,8 @@
 .content-container {
     max-width: 1120px;
     justify-content: center;
-    margin: auto;
+    /* margin: auto; */
+    padding: 0 20px;
 }
 
 #app-logo {
@@ -24,15 +45,13 @@
     margin-right: 16px;
 }
 
-.app-logo-container {
+/* .app-logo-container {
 
-}
+} */
 
 #app-title {
-    font-family: Poppins, sans-serif;
-    font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.88em;
     line-height: 28px;
     color: #173a56;
 }
@@ -43,11 +62,8 @@
 }
 
 .nav-links-container > a {
-    text-decoration: none;
-    font-family: Poppins, sans-serif;
-    font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 28px;
     color: #22343d;
     margin: 0 10px;
@@ -58,15 +74,14 @@
     background: #02897A;
     border-radius: 4px;
     height: 43px;
-    font-family: Poppins;
-    font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 24px;
     color: #ffffff;
     border: none;
     cursor: pointer;
     padding: 0 25px;
+    white-space: pre;
 }
 
 .button-outlined {
@@ -77,10 +92,8 @@
 
 .button-link {
     color:#02897A;
-    font-family: Poppins;
-    font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 24px;
     text-decoration-line: underline;
     background-color: transparent;
@@ -88,6 +101,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: pre;
 }
 
 .button-link-margin {
@@ -125,10 +139,8 @@
 }
 
 .main-header {
-    font-family: Poppins;
-    font-style: normal;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2.5em;
     line-height: 60px;
     color: #22343D;
 }
@@ -143,18 +155,106 @@
 }
 
 .subtitle {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+    font-size: 1.13em;
     line-height: 28px;
     color: #22343D;
 }
 
 .first-section-right-col {
-    background-image: url("./images/first-section-image.png");
-    height: 555px;
-    background-position: center;    
-    background-size: contain;
-    background-repeat: no-repeat;
+   width: 100%;
+   height: auto;
+   pointer-events: none;
+}
+
+#menu-icon {
+    width: 28px;
+    height: 31px;
+    display: none;
+    cursor: pointer;
+}
+
+#menu-colapse {
+    display: none;
+}
+
+.section-3-row {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-3-row > h2 {
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 48px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 900px) {
+    #menu-icon {
+        display: flex;
+    }
+    
+    .nav-bar-wrapper > .nav-bar-buttons-container {
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        overflow-y: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .nav-bar-buttons-container > .nav-links-container > a {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .nav-bar-buttons-container > .action-buttons-wrapper {
+        padding: 10px 0;
+        flex-direction: column;
+    }
+
+    .nav-bar-buttons-container > .action-buttons-wrapper > button {
+        margin: 5px 0;
+    }
+
+    .nav-bar-buttons-container > .nav-links-container > a:hover {
+        text-decoration: underline;
+    }
+
+   .nav > #menu-colapse:not(:checked) ~ .nav-bar-wrapper > .nav-bar-buttons-container {
+        height: 0;     
+    }
+
+    .nav > #menu-colapse:checked ~ .nav-bar-wrapper > .nav-bar-buttons-container {
+        max-height: 100vh;
+        height: auto;
+        padding: 20px 10px;    
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .section-2-col {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .section-2-col-item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
 }
