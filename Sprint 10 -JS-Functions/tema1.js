@@ -2,8 +2,11 @@
 // Funcția findSquare(num) returnează pătratul numărului primit ca date de intrare (este transmis ca 
 // argument în apelul funcției).
 
-getSquare = (num) => console.log(num*num);
+const getSquare = (num) => num*num;
 
-getSquare(6);
-getSquare(0);
-getSquare(-12);
+const printResult = (num) => console.log(getSquare(num));
+
+
+printResult(6);
+printResult(0);
+printResult(-12);
