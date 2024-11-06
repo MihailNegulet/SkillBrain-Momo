@@ -518,6 +518,40 @@ body > div:last-child {
    
 }
 
+.section-11-card {
+    background-color: #02897A;
+    width: 968px;
+    height: 345px;
+    border-radius: 32px;
+    padding: 0;
+}
+
+.img-section-11 {
+    width: 350px;
+    height: 350px;
+    padding-top: 10px;
+}
+
+.section-11-text {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
+ 
+}
+.section-11-text > h2 {
+    width: 510px;
+    height: 92px;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 48.5px;
+    color: #FFFFFF;
+}
+
+.section-11-text > button {
+    color: #02897A;
+}
+
 @media screen and (max-width: 900px) {
     #menu-icon {
         display: flex;
@@ -605,12 +639,34 @@ body > div:last-child {
     }
 
    .price-card {
-    margin-right: 0;
-    margin-bottom: 25px;
+        margin-right: 0;
+        margin-bottom: 25px;
    }
 
    .box-section-10 {
-    margin: 0 0 25px 0;
+        margin: 0 0 25px 0;
+   }
+
+   .section-11-card {
+        flex-direction: column;
+        width: 371px;
+        height: 688px;
+        justify-content: space-around;
+   }
+
+   .section-11-text {
+        align-items: center;
+        height: 688px;
+    
+   }
+   .section-11-text > h2 {
+        width: 328px;
+        height: 144px;
+        text-align: center;
+   }
+
+   .img-section-11 {
+        height: 330px;
    }
 }
 
