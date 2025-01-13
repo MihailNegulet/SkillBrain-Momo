@@ -44,7 +44,7 @@ export default function TaskViewer() {
         dueDate = {
             data[1].dueDate
         }
-        /> <
-        /div>
+        /> < /
+        div >
     );
 }
