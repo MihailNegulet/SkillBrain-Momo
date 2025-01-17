@@ -1,5 +1,5 @@
 import "./TaskViewer.css";
-import TaskCard from "./task-card/TaskCard"
+import TaskCard from "../task-card/TaskCard"
 
 export default function TaskViewer() {
     const data = [
