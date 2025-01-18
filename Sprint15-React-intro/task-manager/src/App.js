@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import TaskViewer from './components/TaskViewer'
+import TaskViewer from './components/task-viewer/TaskViewer'
 
 function App() {
   return (
     <div className="App">
-      <TaskViewer></TaskViewer> 
+      <TaskViewer />
     </div>
   );
 }
