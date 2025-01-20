@@ -45,19 +45,14 @@ const TODOS_MOCK = [
 function App() {
   const [todos, setTodos] = useState(TODOS_MOCK);
 
-
-
-  const handleCheckboxDone = (id) => {
-    setTodos(todos.map(todo =>
-      todo.id === id ? { ...todo, completed: !todo.completed } : todo
-    ));
-  };
-
   const uncompletedTodos = todos.filter((todo) => !todo.completed);
-  const uncompletedTodosTags = uncompletedTodos.map(todo => <TodoItem  key={todo.id} todo={todo} onCheckboxChange={handleCheckboxDone} />);
 
+  const onCreateTodoItemFn = todo =>
+    <TodoItem key={todo.id} todo={todo} onDeleteTodo={() => onDeleteTodo(todo.id)} />
+
+  const uncompletedTodosTags = uncompletedTodos.map(onCreateTodoItemFn);
   const completedTodos = todos.filter((todo) => todo.completed);
-  const completedTodosTags = completedTodos.map(todo => <TodoItem key={todo.id} todo={todo} onCheckboxChange={handleCheckboxDone}/>);
+  const completedTodosTags = completedTodos.map(onCreateTodoItemFn);
   
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newTodo, setNewTodo] = useState({title: "", description: ""});
@@ -99,6 +94,12 @@ function App() {
     handleAddTodo();
   }
   
+  const onDeleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+
+  };
+  
+
 
   return (
     <div className="App">

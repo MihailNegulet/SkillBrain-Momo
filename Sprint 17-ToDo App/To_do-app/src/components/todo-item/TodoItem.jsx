@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./TodoItem.css";
 import Checkbox from "../checkbox/CheckBox";
 
-const TodoItem = ({todo}) => {
+const TodoItem = ({todo, onDeleteTodo}) => {
   const handleCheckboxChange = (value) => {
     console.log(value);
   };
@@ -20,7 +20,7 @@ const TodoItem = ({todo}) => {
         </div>
         <div>
           <i className="fa fa-pencil" aria-hidden="true"></i>
-          <i className="fa fa-trash" aria-hidden="true"></i>
+          <i className="fa fa-trash" aria-hidden="true" onClick={onDeleteTodo}></i>
         </div>
       </div>
 
