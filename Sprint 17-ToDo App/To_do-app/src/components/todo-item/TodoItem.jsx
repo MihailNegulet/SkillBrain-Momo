@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./TodoItem.css";
 import Checkbox from "../checkbox/CheckBox";
 
-const TodoItem = ({todo, onDeleteTodo}) => {
+const TodoItem = ({todo, onDeleteTodo, onEditModalOpen, onChangeTodo}) => {
   const handleCheckboxChange = (value) => {
-    console.log(value);
+    onChangeTodo(todo.id, {
+      completed: value,
+    });
   };
 
   return (
@@ -19,7 +21,7 @@ const TodoItem = ({todo, onDeleteTodo}) => {
           <h4>{todo.title}</h4>
         </div>
         <div>
-          <i className="fa fa-pencil" aria-hidden="true"></i>
+          <i className="fa fa-pencil" aria-hidden="true" onClick={onEditModalOpen}></i>
           <i className="fa fa-trash" aria-hidden="true" onClick={onDeleteTodo}></i>
         </div>
       </div>

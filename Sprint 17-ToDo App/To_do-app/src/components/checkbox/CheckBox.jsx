@@ -6,6 +6,7 @@ const Checkbox = (props) => {
   const [checked, setChecked] = useState(!!props.checked);
 
   const handleCheckboxChange = (e) => {
+    if(e.target.checked !==checked)
     setChecked(e.target.checked);
   };
 
